@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.env
+.browser_data_dir/
+.cache/
+.config/
+.local/
+.logs/
+.npm/
+.nvm/
+.secrets/
+upload/
+sandbox.txt
+skills/
