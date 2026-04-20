@@ -91,7 +91,6 @@ def get_dpo_config() -> DPOConfig:
         gradient_checkpointing=True,
 
         max_length=MAX_LENGTH,
-        max_prompt_length=MAX_LENGTH // 2,
 
         logging_steps=5,
         save_steps=50,
@@ -136,7 +135,7 @@ def main():
         args=dpo_config,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
-        tokenizer=tokenizer,
+        processing_class=tokenizer,
     )
 
     trainer.train()
